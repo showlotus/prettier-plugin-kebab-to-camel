@@ -72,12 +72,13 @@ yarn add --dev prettier-plugin-kebab-to-camel
 
 ### Usage
 
-Add an attributes list in prettier config file.
+Add plugins and an attributes list in prettier config file.
 
 ```js
 module.exports = {
   /* ... */
   attributeUnderKeys: ["props"],
+  plugins: ["prettier-plugin-kebab-to-camel"],
 };
 ```
 
