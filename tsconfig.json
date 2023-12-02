@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "commonjs",
+    "outDir": "./lib",
+    "rootDir": "./",
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true 
+  },
+  "exclude": ["node_modules"],
+  "include": ["./src/**/*.ts"]
+}

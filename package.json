@@ -1,0 +1,53 @@
+{
+  "name": "prettier-plugin-kebab-to-camel",
+  "version": "0.0.2",
+  "description": "A prettier plugin to convet attribute style from kebab-case to camelCase in typescript and javascript files by the provided attributes list.",
+  "main": "lib/src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/showlotus/prettier-plugin-kebab-to-camel.git"
+  },
+  "keywords": [
+    "prettier",
+    "prettier-plugin",
+    "formatter",
+    "typescript",
+    "javascript"
+  ],
+  "author": {
+    "name": "showlotus",
+    "email": "showlotus@qq.com",
+    "url": "https://github.com/showlotus"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/showlotus/prettier-plugin-kebab-to-camel/issues"
+  },
+  "homepage": "https://github.com/showlotus/prettier-plugin-kebab-to-camel#readme",
+  "devDependencies": {
+    "@types/babel__generator": "^7.6.7",
+    "@types/babel__traverse": "^7.20.4",
+    "@types/node": "^20.10.0",
+    "conventional-changelog-cli": "^4.1.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2",
+    "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "@babel/generator": "^7.23.5",
+    "@babel/parser": "^7.23.5",
+    "@babel/traverse": "^7.23.5"
+  },
+  "peerDependencies": {
+    "prettier": "^3.1.0"
+  }
+}
