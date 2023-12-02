@@ -44,7 +44,6 @@ const obj = {
     },
     beforePageChange() {},
   },
-  fn() {},
 };
 
 export default function () {
