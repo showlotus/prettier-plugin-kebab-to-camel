@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-kebab-to-camel",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A prettier plugin to convet attribute style from kebab-case to camelCase in typescript and javascript files by the provided attributes list.",
   "main": "lib/src/index.js",
   "files": [
