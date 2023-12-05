@@ -1,6 +1,9 @@
+const obj = {}
+
 function foo() {
   return {
     props: {
+      ...obj,
       name: "zs",
       "-one-two": 12,
       "thr-fou-": 34,
@@ -10,9 +13,8 @@ function foo() {
       },
       "before-page-change"() {},
     },
-
     fn() {},
-  };
+  }
 }
 
 function bar() {
@@ -24,7 +26,7 @@ function bar() {
         "ccc-ddd": "",
       },
     },
-  };
+  }
 }
 
 export default function () {
@@ -35,5 +37,5 @@ export default function () {
       "prop-three": 3,
       "prop-four": 4,
     },
-  };
+  }
 }

@@ -1,14 +1,16 @@
 export const camelize = (str: string) => {
-  if (str.startsWith('-') || str.endsWith('-')) {
-    return str;
-  }
-  return str.replace(/(-[^\s])/g, str => str[1].toUpperCase());
-};
+  return str.replace(/(-[^\s])/g, (str) => str[1].toUpperCase())
+}
 
-export const transformKey = (node: any) => {
-  if (node.key.name) {
-    node.key.name = camelize(node.key.name);
-  } else if (node.key.value) {
-    node.key.value = camelize(node.key.value);
+export const isKebabStyle = (str: string) => {
+  return /^[^-].*[^-]$/.test(str) && /([^-])+-([^-])+/.test(str)
+}
+
+export const transformer = (node: any) => {
+  if (node.type === "SpreadElement") return
+  if (isKebabStyle(node.key.name)) {
+    node.key.name = camelize(node.key.name)
+  } else if (isKebabStyle(node.key.value)) {
+    node.key.value = camelize(node.key.value)
   }
-};
+}

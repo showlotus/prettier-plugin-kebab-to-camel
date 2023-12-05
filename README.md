@@ -1,5 +1,7 @@
 # Prettier plugin kebab to camel
 
+> Warning: If you use `<Foo>x` in a `.ts` file, it won't work. But you can instead write `x as Foo`.
+
 A prettier plugin to convet attribute style from `kebab-case` to `camelCase` in typescript and javascript files by the provided attributes list.
 
 ### Input
@@ -16,7 +18,7 @@ const obj = {
     },
     "before-page-change"() {},
   },
-};
+}
 
 export default function () {
   return {
@@ -26,7 +28,7 @@ export default function () {
       "prop-three": 3,
       "prop-four": 4,
     },
-  };
+  }
 }
 ```
 
@@ -44,7 +46,7 @@ const obj = {
     },
     beforePageChange() {},
   },
-};
+}
 
 export default function () {
   return {
@@ -54,7 +56,7 @@ export default function () {
       propThree: 3,
       propFour: 4,
     },
-  };
+  }
 }
 ```
 
@@ -79,7 +81,7 @@ module.exports = {
   /* ... */
   attributeUnderKeys: ["props"],
   plugins: ["prettier-plugin-kebab-to-camel"],
-};
+}
 ```
 
 ### APIs

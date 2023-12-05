@@ -1,7 +1,7 @@
 function foo(data?: any[]): any {
-  const a: number = 20;
-  const b: string = "xx";
-  const str = "aa-bb-cc-dd" as string;
+  const a: number = 20
+  const b: string = "xx"
+  const str = "aa-bb-cc-dd" as string
   return {
     props: {
       str,
@@ -15,7 +15,7 @@ function foo(data?: any[]): any {
       beforePageChange() {},
     },
     fn() {},
-  };
+  }
 }
 function bar() {
   const obj = {
@@ -26,14 +26,14 @@ function bar() {
         cccDdd: "",
       },
     },
-  };
+  }
 }
 function Child() {
   return {
     render(h) {
-      return h("div", {});
+      return h("div", {})
     },
-  };
+  }
 }
 export default function (...args: any[]): any {
   const A = () => (
@@ -44,7 +44,7 @@ export default function (...args: any[]): any {
     >
       {" "}
     </Child>
-  );
+  )
   const B = () => (
     <Child
       props={{
@@ -57,7 +57,7 @@ export default function (...args: any[]): any {
     >
       {" "}
     </Child>
-  );
+  )
   return {
     props: {
       propOne: 1,
@@ -71,5 +71,5 @@ export default function (...args: any[]): any {
         propFour: 4,
       },
     },
-  };
+  }
 }

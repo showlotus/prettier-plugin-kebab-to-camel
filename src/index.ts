@@ -1,6 +1,6 @@
-import { parsers as babelParsers } from "prettier/plugins/babel";
-import { parsers as typescriptParsers } from "prettier/plugins/typescript";
-import { preprocessor } from "./preprocessor";
+import { parsers as babelParsers } from "prettier/plugins/babel"
+import { parsers as typescriptParsers } from "prettier/plugins/typescript"
+import { preprocessor } from "./preprocessor"
 
 const options = {
   attributeUnderKeys: {
@@ -10,7 +10,7 @@ const options = {
     default: [{ value: ["props"] }],
     description: "Provide a list of attributes for match",
   },
-};
+}
 
 module.exports = {
   defaultOptions: {},
@@ -25,4 +25,4 @@ module.exports = {
     },
   },
   options,
-};
+}

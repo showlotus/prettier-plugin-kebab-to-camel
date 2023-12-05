@@ -1,7 +1,38 @@
+import { reactive, toRefs } from "vue-demi"
+
+type F = (...args: any[]) => Record<string, any>
+
+namespace Validation {
+  export interface StringValidator {
+    isAcceptable(s: string): boolean
+  }
+}
+
+const enum Direction {
+  Up,
+  Down,
+  Left,
+  Right,
+}
+
+let directions = [Direction.Up, Direction.Down, Direction.Left, Direction.Right]
+
+const list1 = [] as any[]
+const obj = {
+  props: [list1],
+}
+
+export function useMergeProps(useFn: F, outerProps: any) {
+  return function (props?: any, context?: any) {
+    const allProps = reactive({ ...toRefs(props), ...outerProps })
+    return useFn(allProps, context)
+  }
+}
+
 function foo(data?: any[]): any {
   const a: number = 20
-  const b: string = 'xx'
-  const str = 'aa-bb-cc-dd' as string
+  const b: string = "xx"
+  const str = "aa-bb-cc-dd" as string
 
   return {
     props: {
@@ -13,11 +44,11 @@ function foo(data?: any[]): any {
         "-fiv-six-": 56,
         "name-one": "ts",
       },
-      "before-page-change"() { },
+      "before-page-change"() {},
     },
 
-    fn() { },
-  };
+    fn() {},
+  }
 }
 
 function bar() {
@@ -29,7 +60,7 @@ function bar() {
         "ccc-ddd": "",
       },
     },
-  };
+  }
 }
 
 export default function (...args: any[]): any {
@@ -44,7 +75,7 @@ export default function (...args: any[]): any {
         "prop-two": 2,
         "prop-three": 3,
         "prop-four": 4,
-      }
+      },
     },
-  };
+  }
 }
