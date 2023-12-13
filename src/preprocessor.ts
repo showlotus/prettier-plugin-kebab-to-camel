@@ -24,5 +24,5 @@ export function preprocessor(code: string, options: PluginConfig) {
     },
   })
 
-  return generate(ast).code
+  return generate(ast, { retainLines: true }).code
 }

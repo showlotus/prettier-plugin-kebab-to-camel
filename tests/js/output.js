@@ -1,4 +1,5 @@
 const obj = {}
+
 function foo() {
   return {
     props: {
@@ -15,6 +16,7 @@ function foo() {
     fn() {},
   }
 }
+
 function bar() {
   const obj = {
     "aaa-bbb": 32,
@@ -26,6 +28,7 @@ function bar() {
     },
   }
 }
+
 export default function () {
   return {
     props: {

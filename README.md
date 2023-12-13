@@ -64,13 +64,13 @@ export default function () {
 ### Install
 
 ```shell
-npm install --save-dev prettier-plugin-kebab-to-camel
+npm install --save-dev  @showlotus/prettier-plugin-kebab-to-camel
 ```
 
 or, using yarn
 
 ```shell
-yarn add --dev prettier-plugin-kebab-to-camel
+yarn add --dev @showlotus/prettier-plugin-kebab-to-camel
 ```
 
 ### Usage
@@ -81,7 +81,7 @@ Add plugins and an attributes list in prettier config file.
 module.exports = {
   /* ... */
   attributeUnderKeys: ["props"],
-  plugins: ["prettier-plugin-kebab-to-camel"],
+  plugins: ["@showlotus/prettier-plugin-kebab-to-camel"],
 }
 ```
 

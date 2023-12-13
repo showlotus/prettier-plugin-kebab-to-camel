@@ -2,6 +2,7 @@ function foo(data?: any[]): any {
   const a: number = 20
   const b: string = "xx"
   const str = "aa-bb-cc-dd" as string
+
   return {
     props: {
       str,
@@ -14,9 +15,11 @@ function foo(data?: any[]): any {
       },
       beforePageChange() {},
     },
+
     fn() {},
   }
 }
+
 function bar() {
   const obj = {
     "aaa-bbb": 32,
@@ -28,6 +31,7 @@ function bar() {
     },
   }
 }
+
 function Child() {
   return {
     render(h) {
@@ -35,29 +39,19 @@ function Child() {
     },
   }
 }
+
 export default function (...args: any[]): any {
-  const A = () => (
-    <Child
-      props={{
-        "one-two-": "zs",
-      }}
-    >
-      {" "}
-    </Child>
-  )
+  const A = () => <Child props={{ "one-two-": "zs" }}> </Child>
   const B = () => (
     <Child
       props={{
-        props: {
-          aaBbCc: 3,
-          useOneTwo() {},
-          useThrFou: () => {},
-        },
+        props: { aaBbCc: 3, useOneTwo() {}, useThrFou: () => {} },
       }}
     >
       {" "}
     </Child>
   )
+
   return {
     props: {
       propOne: 1,
