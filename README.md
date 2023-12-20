@@ -64,7 +64,7 @@ export default function () {
 ### Install
 
 ```shell
-npm install --save-dev  @showlotus/prettier-plugin-kebab-to-camel
+npm install --save-dev @showlotus/prettier-plugin-kebab-to-camel
 ```
 
 or, using yarn
